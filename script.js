@@ -1,7 +1,41 @@
 // Voidcube Website - Material 3 You Interactive Features
 
+// Dark mode functionality
+function initTheme() {
+    // Check for saved theme preference or default to light mode
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+}
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+}
+
+function updateThemeIcon(theme) {
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        const icon = themeToggle.querySelector('.material-icons');
+        icon.textContent = theme === 'dark' ? 'light_mode' : 'dark_mode';
+    }
+}
+
 // Form submission handler
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize theme
+    initTheme();
+    
+    // Theme toggle button
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+    
     const contactForm = document.querySelector('.contact-form');
     
     if (contactForm) {
@@ -18,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Form submitted:', { name, email, service, message });
             
             // Show success message
-            showNotification('Thank you for your message! We will get back to you soon.', 'success');
+            showNotification('Vielen Dank für Ihre Nachricht! Wir melden uns bald bei Ihnen.', 'success');
             
             // Reset form
             contactForm.reset();
