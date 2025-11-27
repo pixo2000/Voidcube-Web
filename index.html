@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Voidcube - Projekte, Apps und Dienstleistungen für Schulen und Privatpersonen. Erschwingliche Lösungen von 0-500€.">
+    <title>Voidcube - Moderne Digitale Lösungen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <svg class="logo-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 2L4 11V29L20 38L36 29V11L20 2Z" fill="currentColor" opacity="0.2"/>
+                        <path d="M20 2L4 11V29L20 38L36 29V11L20 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M20 2V38M4 11L20 20L36 11M4 29L20 20L36 29" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span class="logo-text">Voidcube</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#services" class="nav-link">Leistungen</a>
+                    <a href="#pricing" class="nav-link">Preise</a>
+                    <a href="#contact" class="nav-link">Kontakt</a>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Theme umschalten">
+                        <span class="material-icons">dark_mode</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Moderne Digitale Lösungen</h1>
+                <p class="hero-subtitle">Wir entwickeln Projekte und Apps für Schulen und Privatpersonen. Von einfachen Webseiten bis zu umfassenden Hosting-Lösungen – alles von 0-500€.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        Jetzt starten
+                    </button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">
+                        Mehr erfahren
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <p class="section-subtitle">Umfassende Lösungen für Ihre Anforderungen</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">code</span>
+                    </div>
+                    <h3 class="service-title">Projekte & Apps</h3>
+                    <p class="service-description">Maßgeschneiderte Anwendungen und Projekte speziell für Schulen und Privatpersonen entwickelt. Moderne, effiziente und benutzerfreundliche Lösungen.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">school</span>
+                    </div>
+                    <h3 class="service-title">Schulveranstaltungen</h3>
+                    <p class="service-description">Professionelles Event-Management und Organisation für Bildungseinrichtungen. Von der Planung bis zur Durchführung kümmern wir uns um alles.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">language</span>
+                    </div>
+                    <h3 class="service-title">Webseiten</h3>
+                    <p class="service-description">Schöne, responsive Webseiten mit modernem Design. Perfekt für Schulen, Unternehmen und persönliche Portfolios.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <span class="material-icons">cloud</span>
+                    </div>
+                    <h3 class="service-title">Hosting</h3>
+                    <p class="service-description">Zuverlässige Webhosting-Dienste mit hervorragender Verfügbarkeit und Support. Ihre Webseite läuft rund um die Uhr reibungslos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Erschwingliche Preise</h2>
+            <p class="section-subtitle">Lösungen für jedes Budget</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Starter</h3>
+                        <div class="pricing-price">
+                            <span class="currency">€</span>
+                            <span class="amount">0-150</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <span class="material-icons">check_circle</span>
+                            <span>Basis-Webseite</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_circle</span>
+                            <span>Responsive Design</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_circle</span>
+                            <span>Basis-Support</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_circle</span>
+                            <span>Bis zu 5 Seiten</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outlined" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        Tarif wählen
+                    </button>
+                </div>
+
+                <div class="pricing-card pricing-card-featured">
+                    <div class="featured-badge">Beliebt</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Professional</h3>
+                        <div class="pricing-price">
+                            <span class="currency">€</span>
+                            <span class="amount">150-350</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <span class="material-icons">check_circle</span>
+                            <span>Erweiterte Webseite/App</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_circle</span>
+                            <span>Individuelle Funktionen</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_circle</span>
+                            <span>Priority Support</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_circle</span>
+                            <span>Hosting inklusive</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_circle</span>
+                            <span>Event-Management</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        Tarif wählen
+                    </button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Enterprise</h3>
+                        <div class="pricing-price">
+                            <span class="currency">€</span>
+                            <span class="amount">350-500</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>
+                            <span class="material-icons">check_circle</span>
+                            <span>Vollständige Individuallösung</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_circle</span>
+                            <span>Erweiterte Funktionen</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_circle</span>
+                            <span>24/7 Support</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_circle</span>
+                            <span>Premium Hosting</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_circle</span>
+                            <span>Mehrere Projekte</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outlined" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        Tarif wählen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Kontakt aufnehmen</h2>
+            <p class="section-subtitle">Bereit, Ihr Projekt zu starten? Kontaktieren Sie uns noch heute!</p>
+            
+            <div class="contact-content">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" class="form-input" placeholder="Ihr Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">E-Mail</label>
+                        <input type="email" id="email" class="form-input" placeholder="ihre.email@beispiel.de" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service" class="form-label">Dienstleistung</label>
+                        <select id="service" class="form-input">
+                            <option value="project">Projekt-/App-Entwicklung</option>
+                            <option value="event">Schulveranstaltung</option>
+                            <option value="website">Webseiten-Design</option>
+                            <option value="hosting">Hosting-Service</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Nachricht</label>
+                        <textarea id="message" class="form-input form-textarea" placeholder="Erzählen Sie uns von Ihrem Projekt..." rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full-width">Nachricht senden</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg class="logo-icon" width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 2L4 11V29L20 38L36 29V11L20 2Z" fill="currentColor" opacity="0.2"/>
+                            <path d="M20 2L4 11V29L20 38L36 29V11L20 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M20 2V38M4 11L20 20L36 11M4 29L20 20L36 29" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span class="logo-text">Voidcube</span>
+                    </div>
+                    <p class="footer-description">Moderne digitale Lösungen für Schulen und Privatpersonen.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Leistungen</h4>
+                        <a href="#services" class="footer-link">Projekte & Apps</a>
+                        <a href="#services" class="footer-link">Schulveranstaltungen</a>
+                        <a href="#services" class="footer-link">Webseiten</a>
+                        <a href="#services" class="footer-link">Hosting</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Unternehmen</h4>
+                        <a href="#" class="footer-link">Über uns</a>
+                        <a href="#pricing" class="footer-link">Preise</a>
+                        <a href="#contact" class="footer-link">Kontakt</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Voidcube. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
