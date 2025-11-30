@@ -134,6 +134,11 @@ body {
     transition: all var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
 }
 
+.nav-link.active {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+}
+
 .nav-link:hover {
     background-color: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
@@ -167,6 +172,49 @@ body {
     height: auto;
     border-radius: var(--md-sys-shape-corner-extra-large);
     box-shadow: var(--md-sys-elevation-3);
+}
+
+.team-hero {
+    padding-bottom: 60px;
+}
+
+.hero-layout {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.team-hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.team-hero-meta {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+}
+
+.meta-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: var(--md-sys-shape-corner-large);
+    padding: 16px;
+    text-align: center;
+    box-shadow: var(--md-sys-elevation-1);
+}
+
+.meta-value {
+    font-size: 28px;
+    font-weight: 700;
+    display: block;
+    color: var(--md-sys-color-primary);
+}
+
+.meta-label {
+    font-size: var(--md-sys-typescale-body-medium-size);
+    color: var(--md-sys-color-on-surface-variant);
 }
 
 .hero-title {
@@ -300,6 +348,110 @@ section {
     height: 100%;
     object-fit: cover;
     transition: transform var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized);
+}
+
+.section-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 13px;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-bottom: 12px;
+}
+
+.team-section {
+    background-color: var(--md-sys-color-surface);
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 48px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.team-card {
+    background: linear-gradient(160deg, rgba(208, 188, 255, 0.15), rgba(110, 88, 154, 0.08));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--md-sys-shape-corner-extra-large);
+    padding: 32px;
+    box-shadow: var(--md-sys-elevation-2);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.team-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 12px;
+    border: 4px solid rgba(208, 188, 255, 0.4);
+}
+
+.team-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-name {
+    text-align: center;
+    font-size: var(--md-sys-typescale-title-large-size);
+    font-weight: 600;
+}
+
+.team-role {
+    text-align: center;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-bottom: 8px;
+}
+
+.team-description {
+    text-align: center;
+    color: var(--md-sys-color-on-surface-variant);
+}
+
+.team-tags {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.team-tag {
+    padding: 6px 14px;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.08);
+    font-size: 14px;
+}
+
+.team-card .btn {
+    margin-top: 12px;
+}
+
+.team-cta {
+    background: linear-gradient(120deg, var(--md-sys-color-primary-container), var(--md-sys-color-secondary-container));
+    padding: 60px 0;
+}
+
+.team-cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.team-cta h3 {
+    font-size: 32px;
+    color: var(--md-sys-color-on-primary-container);
 }
 
 .service-card:hover .service-image img {
@@ -582,6 +734,14 @@ section {
         text-align: center;
     }
     
+    .hero-layout {
+        flex-direction: column;
+    }
+    
+    .team-hero-meta {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    
     .hero-content {
         text-align: center;
     }
@@ -633,6 +793,11 @@ section {
     
     .footer-links {
         grid-template-columns: 1fr;
+    }
+    
+    .team-cta-content {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
