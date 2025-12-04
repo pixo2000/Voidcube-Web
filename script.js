@@ -8,10 +8,52 @@ function setCurrentYear() {
     }
 }
 
-// Form submission handler
+// Mobile menu toggle
+function initMobileMenu() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', function() {
+            const isOpen = mobileMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active', isOpen);
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            
+            // Toggle icon between menu and close
+            const icon = menuToggle.querySelector('.material-icons');
+            icon.textContent = isOpen ? 'close' : 'menu';
+        });
+        
+        // Close menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.querySelector('.material-icons').textContent = 'menu';
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.querySelector('.material-icons').textContent = 'menu';
+            }
+        });
+    }
+}
+
+// Form submission handler & interactive features
 document.addEventListener('DOMContentLoaded', function() {
     // Set current year in footer
     setCurrentYear();
+    
+    // Initialize mobile menu
+    initMobileMenu();
     
     const contactForm = document.querySelector('.contact-form');
     
@@ -22,11 +64,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
-            const service = document.getElementById('service').value;
+            const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
             
             // In a real application, this would send the data to a server
-            console.log('Form submitted:', { name, email, service, message });
+            console.log('Form submitted:', { name, email, subject, message });
             
             // Show success message
             showNotification('Vielen Dank für Ihre Nachricht! Wir melden uns bald bei Ihnen.', 'success');
@@ -35,7 +77,10 @@ document.addEventListener('DOMContentLoaded', function() {
             contactForm.reset();
         });
     }
-    
+});
+
+// Defer scroll animations until everything (inkl. CSS/Fonts) geladen ist
+window.addEventListener('load', function() {
     // Intersection Observer for fade-in animations
     const observerOptions = {
         threshold: 0.1,
@@ -52,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
     
     // Observe all sections and cards
-    const elementsToAnimate = document.querySelectorAll('.service-card, .pricing-card, .contact-form');
+    const elementsToAnimate = document.querySelectorAll('.service-card, .pricing-card, .contact-form, .example-card, .team-card');
     elementsToAnimate.forEach(el => observer.observe(el));
     
     // Smooth scroll for navigation links

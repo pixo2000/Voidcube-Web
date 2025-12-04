@@ -6,6 +6,7 @@
     <meta name="description" content="Voidcube - Projekte, Apps und Dienstleistungen für Schulen und Privatpersonen. Erschwingliche Lösungen von 0-500€.">
     <title>Voidcube - Moderne Digitale Lösungen</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -27,8 +28,19 @@
                 <div class="nav-links">
                     <a href="#services" class="nav-link">Leistungen</a>
                     <a href="#pricing" class="nav-link">Preise</a>
+                    <a href="beispiele.html" class="nav-link">Beispiele</a>
                     <a href="team.html" class="nav-link">Team</a>
                     <a href="#contact" class="nav-link">Kontakt</a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
+                    <span class="material-icons">menu</span>
+                </button>
+                <div class="mobile-menu">
+                    <a href="#services" class="mobile-nav-link">Leistungen</a>
+                    <a href="#pricing" class="mobile-nav-link">Preise</a>
+                    <a href="beispiele.html" class="mobile-nav-link">Beispiele</a>
+                    <a href="team.html" class="mobile-nav-link">Team</a>
+                    <a href="#contact" class="mobile-nav-link">Kontakt</a>
                 </div>
             </div>
         </div>
@@ -39,7 +51,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Moderne Digitale Lösungen</h1>
-                <p class="hero-subtitle">Wir entwickeln Projekte und Apps für Schulen und Privatpersonen. Von einfachen Webseiten bis zu umfassenden Hosting-Lösungen - alles von 0-500€.</p>
+                <p class="hero-subtitle">Projekte und Apps für Schulen und sonstige Organisationen. Ihr braucht hilfe bei Digitalisierung? Ihr denkt eure Schule könnte verbessert werden, wisst aber nicht wie? Wir helfen euch beim finden und beheben dieserr Probleme.</p>
                 <div class="hero-actions">
                     <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
                         Jetzt starten
@@ -69,8 +81,8 @@
                     <div class="service-icon">
                         <span class="material-icons">code</span>
                     </div>
-                    <h3 class="service-title">Projekte & Apps</h3>
-                    <p class="service-description">Maßgeschneiderte Anwendungen und Projekte speziell für Schulen und Privatpersonen entwickelt. Moderne, effiziente und benutzerfreundliche Lösungen.</p>
+                    <h3 class="service-title">Tools & Projekte</h3>
+                    <p class="service-description">Maßgeschneiderte Anwendungen und Projekte speziell für Schulen und Privatpersonen. Von einfachen Webseiten über Kurswahltools zu umfassenden Apps.</p>
                 </div>
 
                 <div class="service-card">
@@ -80,8 +92,8 @@
                     <div class="service-icon">
                         <span class="material-icons">school</span>
                     </div>
-                    <h3 class="service-title">Schulveranstaltungen</h3>
-                    <p class="service-description">Professionelles Event-Management und Organisation für Bildungseinrichtungen. Von der Planung bis zur Durchführung kümmern wir uns um alles.</p>
+                    <h3 class="service-title">Veranstaltungen</h3>
+                    <p class="service-description">Ihr wollt an eurer Schule ein Event organisieren wie z.B. ein Minecraft-Server für Schüler? Von der Planung bis zur Durchführung kümmern wir uns um alles.</p>
                 </div>
 
                 <div class="service-card">
@@ -91,20 +103,10 @@
                     <div class="service-icon">
                         <span class="material-icons">language</span>
                     </div>
-                    <h3 class="service-title">Webseiten</h3>
-                    <p class="service-description">Schöne, responsive Webseiten mit modernem Design. Perfekt für Schulen, Unternehmen und persönliche Portfolios.</p>
+                    <h3 class="service-title">Werbung</h3>
+                    <p class="service-description">Damit euer Event bekannt wird. Sei es eine Webseite oder Social-Media Posts. Wir zeigen euch die Grundlagen und helfen bei der Umsetzung im ersten Event.</p>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-image">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&q=80" alt="Cloud Hosting">
-                    </div>
-                    <div class="service-icon">
-                        <span class="material-icons">cloud</span>
-                    </div>
-                    <h3 class="service-title">Hosting</h3>
-                    <p class="service-description">Zuverlässige Webhosting-Dienste mit hervorragender Verfügbarkeit und Support. Ihre Webseite läuft rund um die Uhr reibungslos.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -143,9 +145,6 @@
                             <span>Kontaktieren Sie uns mit Ihrem Projekt</span>
                         </li>
                     </ul>
-                    <button class="btn btn-outlined" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-                        Anfrage senden
-                    </button>
                 </div>
 
                 <div class="pricing-card pricing-card-featured">
@@ -160,24 +159,21 @@
                     <ul class="pricing-features">
                         <li>
                             <span class="material-icons">check_circle</span>
-                            <span>Basis-Webseite</span>
-                        </li>
-                        <li>
-                            <span class="material-icons">check_circle</span>
-                            <span>Responsive Design</span>
-                        </li>
-                        <li>
-                            <span class="material-icons">check_circle</span>
                             <span>Basis-Support</span>
                         </li>
                         <li>
                             <span class="material-icons">check_circle</span>
-                            <span>Bis zu 5 Seiten</span>
+                            <span>Einfache Events</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_circle</span>
+                            <span>Standard Web-Apps</span>
+                        </li>
+                        <li>
+                            <span class="material-icons">check_circle</span>
+                            <span>Standard Webseiten</span>
                         </li>
                     </ul>
-                    <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-                        Tarif wählen
-                    </button>
                 </div>
 
                 <div class="pricing-card">
@@ -185,34 +181,27 @@
                         <h3 class="pricing-title">Professional</h3>
                         <div class="pricing-price">
                             <span class="currency">€</span>
-                            <span class="amount">150-350</span>
+                            <span class="amount">150-500</span>
                         </div>
                     </div>
                     <ul class="pricing-features">
                         <li>
                             <span class="material-icons">check_circle</span>
-                            <span>Erweiterte Webseite/App</span>
+                            <span>Eigener Code</span>
                         </li>
                         <li>
                             <span class="material-icons">check_circle</span>
-                            <span>Individuelle Funktionen</span>
+                            <span>Garantierter Zugriff auf Source Code</span>
                         </li>
                         <li>
                             <span class="material-icons">check_circle</span>
-                            <span>Priority Support</span>
+                            <span>Erweiterte Apps & Webseiten</span>
                         </li>
                         <li>
                             <span class="material-icons">check_circle</span>
-                            <span>Hosting inklusive</span>
-                        </li>
-                        <li>
-                            <span class="material-icons">check_circle</span>
-                            <span>Event-Management</span>
+                            <span>Event-Kampagnen Planung</span>
                         </li>
                     </ul>
-                    <button class="btn btn-outlined" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-                        Tarif wählen
-                    </button>
                 </div>
             </div>
         </div>
@@ -225,6 +214,17 @@
             <p class="section-subtitle">Bereit, Ihr Projekt zu starten? Kontaktieren Sie uns noch heute!</p>
             
             <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-info-title">Direkt erreichen</h3>
+                    <div class="contact-info-item">
+                        <span class="material-icons">email</span>
+                        <a href="mailto:kontakt@voidcube.de">kontakt@voidcube.de</a>
+                    </div>
+                    <div class="contact-info-item">
+                        <span class="material-icons">phone</span>
+                        <a href="tel:+4915123456789">+49 151 23456789</a>
+                    </div>
+                </div>
                 <form class="contact-form">
                     <div class="form-group">
                         <label for="name" class="form-label">Name</label>
@@ -237,13 +237,8 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="service" class="form-label">Dienstleistung</label>
-                        <select id="service" class="form-input">
-                            <option value="project">Projekt-/App-Entwicklung</option>
-                            <option value="event">Schulveranstaltung</option>
-                            <option value="website">Webseiten-Design</option>
-                            <option value="hosting">Hosting-Service</option>
-                        </select>
+                        <label for="subject" class="form-label">Betreff</label>
+                        <input type="text" id="subject" class="form-input" placeholder="Worum geht es?" required>
                     </div>
                     
                     <div class="form-group">
@@ -275,10 +270,9 @@
                 <div class="footer-links">
                     <div class="footer-column">
                         <h4 class="footer-title">Leistungen</h4>
-                        <a href="#services" class="footer-link">Projekte & Apps</a>
+                        <a href="#services" class="footer-link">Tools & Projekte</a>
                         <a href="#services" class="footer-link">Schulveranstaltungen</a>
-                        <a href="#services" class="footer-link">Webseiten</a>
-                        <a href="#services" class="footer-link">Hosting</a>
+                        <a href="#services" class="footer-link">Werbung</a>
                     </div>
                     <div class="footer-column">
                         <h4 class="footer-title">Unternehmen</h4>
@@ -290,6 +284,10 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; <span id="currentYear"></span> Voidcube. Alle Rechte vorbehalten.</p>
+                <div class="footer-legal">
+                    <a href="impressum.html" class="footer-link">Impressum</a>
+                    <a href="datenschutz.html" class="footer-link">Datenschutz</a>
+                </div>
             </div>
         </div>
     </footer>
