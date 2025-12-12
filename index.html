@@ -11,6 +11,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Matomo -->
+    <script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//voidcube.de:8087/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+    </script>
+    <!-- End Matomo Code -->
+
 </head>
 <body>
     <!-- Navigation -->
@@ -103,8 +120,8 @@
                     <div class="service-icon">
                         <span class="material-icons">language</span>
                     </div>
-                    <h3 class="service-title">Werbung</h3>
-                    <p class="service-description">Damit euer Event bekannt wird. Sei es eine Webseite oder Social-Media Posts. Wir zeigen euch die Grundlagen und helfen bei der Umsetzung im ersten Event.</p>
+                    <h3 class="service-title">Event-Planung</h3>
+                    <p class="service-description">Ihr habt ein Event, und wisst nicht wie ihr die Zielgruppe erreicht? Sei es eine Webseite oder Social-Media Posts. Wir zeigen euch die Grundlagen und helfen bei der Umsetzung im ersten Event.</p>
                 </div>
 
             </div>
@@ -116,6 +133,7 @@
         <div class="container">
             <h2 class="section-title">Erschwingliche Preise</h2>
             <p class="section-subtitle">Lösungen für jedes Budget</p>
+            <p class="pricing-note">Alle Preise sind Richtwerte und nicht fix – jedes Budget ist möglich. Kontaktieren Sie uns für ein individuelles Angebot!</p>
             
             <div class="pricing-grid">
                 <div class="pricing-card pricing-card-free">
@@ -207,47 +225,45 @@
         </div>
     </section>
 
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-content">
+                <div class="trust-icon">
+                    <span class="material-icons">visibility_off</span>
+                </div>
+                <div class="trust-text">
+                    <h2 class="section-title">Unsere Kunden bleiben privat</h2>
+                    <p class="trust-description">Aus Respekt gegenüber unseren Kunden veröffentlichen wir keine Namen oder Details ohne ausdrückliche Genehmigung. Diskretion und Vertrauen stehen bei uns an erster Stelle.</p>
+                    <p class="trust-description">Werfen Sie einen Blick auf unsere <a href="beispiele.html">Beispielprojekte</a>, um zu sehen, was wir umsetzen können – oder lernen Sie unser <a href="team.html">Team</a> kennen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Kontakt aufnehmen</h2>
             <p class="section-subtitle">Bereit, Ihr Projekt zu starten? Kontaktieren Sie uns noch heute!</p>
             
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3 class="contact-info-title">Direkt erreichen</h3>
-                    <div class="contact-info-item">
-                        <span class="material-icons">email</span>
-                        <a href="mailto:kontakt@voidcube.de">kontakt@voidcube.de</a>
-                    </div>
-                    <div class="contact-info-item">
-                        <span class="material-icons">phone</span>
-                        <a href="tel:+4915123456789">+49 151 23456789</a>
-                    </div>
+            <div class="contact-cards">
+                <a href="mailto:kontakt@voidcube.de" class="contact-card">
+                    <span class="material-icons contact-card-icon">email</span>
+                    <span class="contact-card-label">E-Mail</span>
+                    <span class="contact-card-detail">kontakt@voidcube.de</span>
+                </a>
+                
+                <div class="contact-card contact-card-center">
+                    <h3 class="contact-card-title">So erreichen Sie uns</h3>
+                    <p class="contact-card-text">Melden Sie sich bei uns mit Ihrem Projekt und Ihrem Wunschbudget – wir finden gemeinsam die beste Lösung für Sie!</p>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" class="form-input" placeholder="Ihr Name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email" class="form-label">E-Mail</label>
-                        <input type="email" id="email" class="form-input" placeholder="ihre.email@beispiel.de" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject" class="form-label">Betreff</label>
-                        <input type="text" id="subject" class="form-input" placeholder="Worum geht es?" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message" class="form-label">Nachricht</label>
-                        <textarea id="message" class="form-input form-textarea" placeholder="Erzählen Sie uns von Ihrem Projekt..." rows="5" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary btn-full-width">Nachricht senden</button>
-                </form>
+                
+                <a href="tel:+491625629652" class="contact-card">
+                    <span class="material-icons contact-card-icon">phone</span>
+                    <span class="contact-card-label">Anrufen</span>
+                    <span class="contact-card-detail">+49 162 5629652</span>
+                </a>
             </div>
         </div>
     </section>
