@@ -710,6 +710,28 @@ section {
     text-decoration: underline;
 }
 
+.trust-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.trust-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.trust-actions .btn:hover {
+    text-decoration: none;
+}
+
+.trust-actions .btn .material-icons {
+    font-size: 20px;
+}
+
 @media (max-width: 768px) {
     .trust-content {
         flex-direction: column;
@@ -719,6 +741,10 @@ section {
     
     .trust-text .section-title {
         text-align: center;
+    }
+
+    .trust-actions {
+        justify-content: center;
     }
 }
 
