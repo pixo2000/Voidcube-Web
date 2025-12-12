@@ -732,6 +732,100 @@ section {
     font-size: 20px;
 }
 
+/* Discover Section */
+.discover-section {
+    background: linear-gradient(180deg, var(--md-sys-color-primary-container) 0%, var(--md-sys-color-surface-variant) 100%);
+    padding: 80px 0;
+}
+
+.discover-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.discover-card {
+    background-color: var(--md-sys-color-surface);
+    border-radius: var(--md-sys-shape-corner-extra-large);
+    padding: 40px 32px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: var(--md-sys-elevation-2);
+    transition: all var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.discover-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--md-sys-elevation-3);
+}
+
+.discover-card-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-secondary) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--md-sys-motion-duration-medium) var(--md-sys-motion-easing-emphasized);
+}
+
+.discover-card:hover .discover-card-icon {
+    transform: scale(1.1);
+}
+
+.discover-card-icon .material-icons {
+    font-size: 40px;
+    color: var(--md-sys-color-on-primary);
+}
+
+.discover-card-title {
+    font-size: var(--md-sys-typescale-headline-medium-size);
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface);
+}
+
+.discover-card-description {
+    font-size: var(--md-sys-typescale-body-medium-size);
+    color: var(--md-sys-color-on-surface-variant);
+    line-height: 1.6;
+}
+
+.discover-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--md-sys-color-primary);
+    font-weight: 500;
+    margin-top: auto;
+    padding-top: 8px;
+}
+
+.discover-card-link .material-icons {
+    font-size: 20px;
+    transition: transform var(--md-sys-motion-duration-short) var(--md-sys-motion-easing-emphasized);
+}
+
+.discover-card:hover .discover-card-link .material-icons {
+    transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+    .discover-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .discover-card {
+        padding: 32px 24px;
+    }
+}
+
 @media (max-width: 768px) {
     .trust-content {
         flex-direction: column;
@@ -1002,8 +1096,19 @@ section {
         justify-content: center;
     }
 
+    /* Navbar bleibt sticky auf Mobile */
     .navbar {
-        position: relative;
+        position: sticky;
+        top: 0;
+    }
+    
+    /* Padding für body damit Content nicht unter der Navbar versteckt wird */
+    .mobile-menu {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        border-radius: 0 0 var(--md-sys-shape-corner-large) var(--md-sys-shape-corner-large);
     }
     
     .hero {
