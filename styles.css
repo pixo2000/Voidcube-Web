@@ -1605,3 +1605,72 @@ section {
     color: var(--md-sys-color-outline);
 }
 
+/* Notice boxes for legal and pricing sections */
+.legal-notice-box,
+.pricing-notice-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(208, 188, 255, 0.1);
+    border: 1px solid var(--md-sys-color-primary);
+    border-radius: var(--md-sys-shape-corner-medium);
+    padding: 16px 20px;
+    margin-bottom: 24px;
+}
+
+.legal-notice-box .material-icons,
+.pricing-notice-box .material-icons {
+    color: var(--md-sys-color-primary);
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.legal-notice-box p,
+.pricing-notice-box p {
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    line-height: 1.6;
+}
+
+.pricing-notice-box {
+    max-width: 800px;
+    margin: 16px auto 32px;
+}
+
+/* Gamer section styling */
+.gamer-section {
+    background: linear-gradient(180deg, rgba(208, 188, 255, 0.03) 0%, transparent 100%);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Examples notice box */
+.examples-notice-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(208, 188, 255, 0.1);
+    border: 1px solid var(--md-sys-color-primary);
+    border-radius: var(--md-sys-shape-corner-medium);
+    padding: 16px 20px;
+    margin-top: 24px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.examples-notice-box .material-icons {
+    color: var(--md-sys-color-primary);
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.examples-notice-box p {
+    margin: 0;
+    color: var(--md-sys-color-on-surface);
+    line-height: 1.6;
+}
+

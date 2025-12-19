@@ -21,3 +21,4 @@ package-lock.json
 # Build artifacts (if build process is added in future)
 dist/
 build/
+notes.md
