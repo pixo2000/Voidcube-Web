@@ -400,6 +400,33 @@ section {
     object-fit: cover;
 }
 
+/* Versions-Box - nutzt Dark-Mode Tokens */
+.version-box {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px;
+    margin-bottom: 16px;
+    border-left: 4px solid var(--md-sys-color-primary);
+    background-color: rgba(208, 188, 255, 0.04);
+    border-radius: var(--md-sys-shape-corner-small);
+    color: var(--md-sys-color-on-background);
+}
+
+.version-box .material-icons {
+    color: var(--md-sys-color-primary);
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.version-box p { margin: 0; }
+
+.version-box .version-note {
+    margin-top: 4px;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 0.95em;
+}
+
 .team-name {
     text-align: center;
     font-size: var(--md-sys-typescale-title-large-size);
