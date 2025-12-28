@@ -54,6 +54,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize mobile menu
     initMobileMenu();
+    // Initialize FAQ accordion
+    initFAQ();
     
     const contactForm = document.querySelector('.contact-form');
     
@@ -208,3 +210,39 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// FAQ accordion: accessible expand/collapse
+function initFAQ() {
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(q => {
+        const answerId = q.getAttribute('aria-controls');
+        const answer = document.getElementById(answerId);
+
+        // Ensure initial closed state
+        answer.style.maxHeight = '0px';
+        answer.style.overflow = 'hidden';
+        answer.style.opacity = '0';
+
+        q.addEventListener('click', () => {
+            const isOpen = q.getAttribute('aria-expanded') === 'true';
+            const item = q.closest('.faq-item');
+
+            if (isOpen) {
+                // close
+                q.setAttribute('aria-expanded', 'false');
+                item.classList.remove('open');
+                answer.style.maxHeight = '0px';
+                answer.style.opacity = '0';
+            } else {
+                // open
+                q.setAttribute('aria-expanded', 'true');
+                item.classList.add('open');
+                // ensure element is visible to measure
+                answer.style.display = 'block';
+                const h = answer.scrollHeight;
+                answer.style.maxHeight = h + 'px';
+                answer.style.opacity = '1';
+            }
+        });
+    });
+}
